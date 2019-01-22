@@ -34,12 +34,18 @@ while rep == 1 or rep == 2:
     if rep == 1:
         x = float(input('Digite o primeiro número:'))
         y = float(input('Digite o segundo número:'))
+        while y == 0 and op == 4:
+            print('Indeterminacao!\nPor favor, nao use zero no numerador!\n')
+            y = float(input('Digite o segundo número:'))
         r = opera(op, x, y)
         imprime(r)
         
     if rep == 2: # para fazer a operação com o resultado obtido anteriormente
         print('O resultado obtido anteriormente foi %.3f' %(r))
-        y = float(input('Digite o segundo número:'))   
+        y = float(input('Digite o segundo número:'))
+        while y == 0 and op == 4:
+            print('Indeterminacao!\nPor favor, nao use zero no numerador!\n')
+            y = float(input('Digite o segundo número:'))
         r = opera(op, r, y)
         imprime(r)
     
